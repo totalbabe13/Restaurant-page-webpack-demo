@@ -1,5 +1,4 @@
 const createAboutTab = (() => {
-
   let tabsContainer = document.getElementById("tabs-container");
   let aboutBtn = document.createElement("button");
   aboutBtn.id = "about";
@@ -11,7 +10,6 @@ const createAboutTab = (() => {
 
 const insertContent = (() => {
    let contentDiv   = document.getElementById("content");
-
    let modalDisplay = document.getElementById("tabs-modal-display")
    let oldModal     = modalDisplay.firstChild
    let aboutModal   = document.createElement("div");
@@ -25,23 +23,14 @@ const insertContent = (() => {
    infoBlurb.setAttribute("style", "padding: 2em; color: beige;");
    aboutModal.setAttribute("style","height:100vh; width:100vw; background-color: #693003b8; text-align:center;");
 
-
-
-     if(modalDisplay.firstChild){
-       modalDisplay.removeChild(oldModal);
+   if(modalDisplay.firstChild){
+     modalDisplay.removeChild(oldModal);
+     modalDisplay.appendChild(aboutModal);
+     aboutModal.appendChild(infoBlurb);
+   } else if(modalDisplay.firstChild === null){
        modalDisplay.appendChild(aboutModal);
        aboutModal.appendChild(infoBlurb);
-
-       console.log('oldModal');
-     } else if(modalDisplay.firstChild === null){
-        modalDisplay.appendChild(aboutModal);
-        aboutModal.appendChild(infoBlurb);
-     }
-
-
-   // modalDisplay.appendChild(aboutModal);
-   // aboutModal.appendChild(infoBlurb);
-
+     };
 });
 
 export { createAboutTab }

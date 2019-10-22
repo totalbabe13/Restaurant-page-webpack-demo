@@ -27,8 +27,6 @@ const contactInsertContent = (() => {
    phoneNumber.setAttribute("style", "padding: 2em; color: beige;");
    phoneNumber.textContent = "1-800-wah-zahhhhhh";
 
-
-
    if(modalDisplay.firstChild){
      modalDisplay.removeChild(oldModal);
      modalDisplay.appendChild(contactInfo);
@@ -39,9 +37,6 @@ const contactInsertContent = (() => {
      contactInfo.appendChild(address);
      contactInfo.appendChild(phoneNumber);
      };
-
 });
-
-
 
 export { createContactTab };

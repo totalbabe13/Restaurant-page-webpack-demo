@@ -1,6 +1,5 @@
 
 const testLayout = (() => {
-
    document.body.setAttribute("background","rest_home.jpeg");
    let contentDiv = document.getElementById('content')
    contentDiv.setAttribute("style", "width: 50%; margin: auto;")
